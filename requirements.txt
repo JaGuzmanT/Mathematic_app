@@ -7,4 +7,3 @@ streamlit==1.37.1
 streamlit_extras==0.4.7
 streamlit_lottie==0.0.5
 sympy==1.13.2
-tensorflow==2.17.0
