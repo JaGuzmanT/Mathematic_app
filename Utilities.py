@@ -3,7 +3,6 @@ import streamlit as st
 import json
 
 # Guarda el string base64 de la imagen en un archivo .txt una sola vez y luego carga el contenido de ese archivo
-@st.cache_resource
 def open_image():
     with open("Images/Image_1_base64.txt", "r") as f:
         image_base64 = f.read()
@@ -42,17 +41,18 @@ def sidebar_elements():
         st.write("Aplicación Web para cálculo universitario")
 #----------------------------------------------------------------#
 # Imagen de la página de Inicio
-@st.cache_resource()
+@st.cache_resource
 def imagen_inicio():
     st.image("Images/Logo_1.webp", width=500)
 #----------------------------------------------------------------#
 # Configuración de las animaciones
-@st.cache_resource()
+@st.cache_resource
 def load_lottiefile(filename: str):
                 with open(file=filename, mode='r') as f:
                     return json.load(f)
 #----------------------------------------------------------------#
 # Ocultando el botón de hamburguesa
+@st.cache_resource
 def hidding_hamburguer():
     hide_streamlit_style = """
     <style>
