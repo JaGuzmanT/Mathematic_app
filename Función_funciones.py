@@ -30,11 +30,12 @@ def graficar_funcion(funcion_str, var_str):
     
     # Graficar la función
     fig = px.line(x=x_vals, y=y_vals, 
-                labels={'x': var_str, 'y': f'f({var_str})'}  # Etiquetas personalizadas
+                labels={'x': var_str, 'y': f'f({var_str})'} # Etiquetas personalizadas
                 )
     st.plotly_chart(fig)
     # Mostrar las raíces en Streamlit
-    st.write(f":green[Raíces reales de la función:] :orange[{raices_reales}] ")
+    st.write(":green[Raíces reales de la función:]")
+    st.latex(sp.latex(raices_reales))
 
     # # Figura con matplotlib
     # fig, ax = plt.subplots()

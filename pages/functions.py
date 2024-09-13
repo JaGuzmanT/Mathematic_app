@@ -27,6 +27,7 @@ with st.form(key="dominios"):
         try: 
             variable = variable[2]
             graficar_funcion(funcion_str=funcion, var_str=variable)
+            print("Ok")
             # st.success("La función evaluada es:")
             # st.success(f"El dominio de la función en términos de {var_str} es: {dominio}")
         except:
