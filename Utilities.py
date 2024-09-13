@@ -3,8 +3,11 @@ import streamlit as st
 import json
 
 # Guarda el string base64 de la imagen en un archivo .txt una sola vez y luego carga el contenido de ese archivo
-with open("Images/Image_1_base64.txt", "r") as f:
-    image_base64 = f.read()
+@st.cache_resource
+def open_image():
+    with open("Images/Image_1_base64.txt", "r") as f:
+        image_base64 = f.read()
+        return image_base64
 #----------------------------------------------------------------#
 # Configuración de las páginas de la webapp
 def page_configuration():
@@ -14,6 +17,7 @@ def page_configuration():
                 initial_sidebar_state="auto")
 #----------------------------------------------------------------#
 # Configuración del sidebar
+image_base64 = open_image()
 def sidebar_elements():
     st.markdown(
             f"""
@@ -26,7 +30,7 @@ def sidebar_elements():
             unsafe_allow_html = True,
             ) # It is a url of a base64
     
-    st.sidebar.title("CalcMaster WebApp")
+    st.sidebar.title("CalcMaster WebApp 1.0")
 
     # Defining all the pages and the interface into the sidebar
     with st.sidebar:
@@ -43,6 +47,7 @@ def imagen_inicio():
     st.image("Images/Logo_1.webp", width=500)
 #----------------------------------------------------------------#
 # Configuración de las animaciones
+@st.cache_resource()
 def load_lottiefile(filename: str):
                 with open(file=filename, mode='r') as f:
                     return json.load(f)
@@ -59,6 +64,7 @@ def hidding_hamburguer():
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 #----------------------------------------------------------------#
 # Ocultando el botón de GitHub
+@st.cache_resource
 def hidding_github():
     hide_github_icon = """
     <style>

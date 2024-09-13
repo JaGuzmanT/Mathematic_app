@@ -24,9 +24,9 @@ def limit_calculation(function_str, var_str, value, direction='+-'):
 
     return limit, var_str, function_str, simplified_function, value
 
-funcion = "sin(x)/x"
-variable = "x"
-valor_punto = 0
+# funcion = "sin(x)/x"
+# variable = "x"
+# valor_punto = 0
 
-limit = limit_calculation(function_str=funcion, var_str=variable, value=valor_punto)
-print(f"The limit is: {limit[0]}")
+# limit = limit_calculation(function_str=funcion, var_str=variable, value=valor_punto)
+# print(f"The limit is: {limit[0]}")

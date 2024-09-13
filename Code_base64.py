@@ -1,7 +1,7 @@
 import base64
 
 # 1. Lee la imagen y conviértela en un string base64
-with open("Images/Image_1.png", "rb") as image_file:
+with open("Images/Logo_sidebar.webp", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
 # 2. Guarda el string base64 en un archivo de texto
