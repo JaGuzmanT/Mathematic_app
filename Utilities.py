@@ -13,7 +13,7 @@ def page_configuration():
     st.set_page_config(page_title="CalcMaster",
                 page_icon="Images/Logo.ico",
                 layout="wide",
-                initial_sidebar_state="auto")
+                initial_sidebar_state="expanded")
 #----------------------------------------------------------------#
 # Configuración del sidebar
 image_base64 = open_image()
