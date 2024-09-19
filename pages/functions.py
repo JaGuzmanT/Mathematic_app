@@ -5,6 +5,7 @@ from Función_funciones import graficar_funcion
 
 # -------------------- Setting the main page of the webapp -------------------- #
 utils.page_configuration()
+utils.hide_elements()
 utils.sidebar_elements()
 
 st.title(":blue[Gráfica de una función] 💹")
