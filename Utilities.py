@@ -48,7 +48,7 @@ def load_lottiefile(filename: str):
                     return load(f)
 #----------------------------------------------------------------#
 # Ocultando el botón de hamburguesa
-@st.cache_resource
+
 def hide_elements(hide_menu=True, hide_footer=True, hide_header=True):
     style = "<style>"
     if hide_menu:
