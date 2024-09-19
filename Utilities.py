@@ -53,24 +53,13 @@ def load_lottiefile(filename: str):
 #----------------------------------------------------------------#
 # Ocultando el botón de hamburguesa
 @st.cache_resource
-def hidding_hamburguer():
-    hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility:hidden;}
-    </style>
-    """
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-#----------------------------------------------------------------#
-# Ocultando el botón de GitHub
-@st.cache_resource
-def hidding_github():
-    hide_github_icon = """
-    <style>
-    #GithubIcon {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility:hidden;}
-    </style>
-    """
-    st.markdown(hide_github_icon, unsafe_allow_html=True)
+def hide_elements(hide_menu=True, hide_footer=True, hide_header=True):
+    style = "<style>"
+    if hide_menu:
+        style += "#MainMenu {visibility: hidden;}"
+    if hide_footer:
+        style += "footer {visibility: hidden;}"
+    if hide_header:
+        style += "header {visibility: hidden;}"
+    style += "</style>"
+    st.markdown(style, unsafe_allow_html=True)

@@ -5,8 +5,7 @@ from streamlit_lottie import st_lottie
 
 # -------------------- Setting the main page of the webapp -------------------- #
 utils.page_configuration()
-utils.hidding_hamburguer()
-utils.hidding_github()
+utils.hide_elements()
 utils.sidebar_elements()
 
 st.title(":green[CalcMaster WebApp] 👨‍🏫")
