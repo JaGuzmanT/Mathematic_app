@@ -3,11 +3,6 @@ import streamlit as st
 from json import load
 import base64
 
-# Guarda el string base64 de la imagen en un archivo .txt una sola vez y luego carga el contenido de ese archivo
-def open_image():
-    with open("Images/Image_1_base64.txt", "r") as f:
-        image_base64 = f.read()
-        return image_base64
 #----------------------------------------------------------------#
 # Configuración de las páginas de la webapp
 def page_configuration():
