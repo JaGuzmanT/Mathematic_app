@@ -13,18 +13,18 @@ def page_configuration():
 #----------------------------------------------------------------#
 # Configuración del sidebar
 def sidebar_elements():
-    side_background_exten = "webp"
-    side_image = "Images/Logo_sidebar.webp"
-    st.markdown(
-            f"""
-            <style>
-            [data-testid="stSidebar"] > div:first-child {{
-            background: url(data:image/{side_background_exten};base64,{base64.b64encode(open(side_image, "rb").read()).decode()});
-            }}
-            </style>
-            """,
-            unsafe_allow_html=True
-    )
+    # side_background_exten = "webp"
+    # side_image = "Images/Logo_sidebar.webp"
+    # st.markdown(
+    #         f"""
+    #         <style>
+    #         [data-testid="stSidebar"] > div:first-child {{
+    #         background: url(data:image/{side_background_exten};base64,{base64.b64encode(open(side_image, "rb").read()).decode()});
+    #         }}
+    #         </style>
+    #         """,
+    #         unsafe_allow_html=True
+    # )
     st.sidebar.title("CalcMaster WebApp 1.0.1")
 
     # Defining all the pages and the interface into the sidebar
