@@ -42,13 +42,11 @@ def imagen_inicio():
     st.image("Images/Logo_1.webp", width=500)
 #----------------------------------------------------------------#
 # Configuración de las animaciones
-@st.cache_resource
 def load_lottiefile(filename: str):
                 with open(file=filename, mode='r') as f:
                     return load(f)
 #----------------------------------------------------------------#
-# Ocultando el botón de hamburguesa
-
+# Ocultando el botón de hamburguesa y de Github
 def hide_elements(hide_menu=True, hide_footer=True, hide_header=True):
     style = "<style>"
     if hide_menu:
