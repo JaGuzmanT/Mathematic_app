@@ -1,6 +1,7 @@
 # Loading libraries
 import streamlit as st
-import json
+from json import load
+import base64
 
 # Guarda el string base64 de la imagen en un archivo .txt una sola vez y luego carga el contenido de ese archivo
 def open_image():
@@ -16,20 +17,20 @@ def page_configuration():
                 initial_sidebar_state="auto")
 #----------------------------------------------------------------#
 # Configuración del sidebar
-image_base64 = open_image()
 def sidebar_elements():
+    side_background_exten = "webp"
+    side_image = "Images/Logo_sidebar.webp"
     st.markdown(
             f"""
             <style>
             [data-testid="stSidebar"] > div:first-child {{
-            background: url(data:image/webp;base64,{image_base64});
+            background: url(data:image/{side_background_exten};base64,{base64.b64encode(open(side_image, "rb").read()).decode()});
             }}
             </style>
             """,
-            unsafe_allow_html = True,
-            ) # It is a url of a base64
-    
-    st.sidebar.title("CalcMaster WebApp 1.0")
+            unsafe_allow_html=True
+    )
+    st.sidebar.title("CalcMaster WebApp 1.0.1")
 
     # Defining all the pages and the interface into the sidebar
     with st.sidebar:
