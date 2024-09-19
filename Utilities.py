@@ -45,7 +45,7 @@ def imagen_inicio():
 @st.cache_resource
 def load_lottiefile(filename: str):
                 with open(file=filename, mode='r') as f:
-                    return json.load(f)
+                    return load(f)
 #----------------------------------------------------------------#
 # Ocultando el botón de hamburguesa
 @st.cache_resource
