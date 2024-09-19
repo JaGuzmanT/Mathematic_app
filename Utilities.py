@@ -34,7 +34,7 @@ def sidebar_elements():
         st.page_link(page="pages/limit.py", label="Límites", icon=":material/query_stats:")
 
         st.divider()
-        st.write("Aplicación Web para cálculo universitario")
+        st.write(":orange[Aplicación Web para cálculo universitario]")
 #----------------------------------------------------------------#
 # Imagen de la página de Inicio
 @st.cache_resource
