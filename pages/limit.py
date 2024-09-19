@@ -6,6 +6,7 @@ from limit_function import limit_calculation
 
 # -------------------- Setting the main page of the webapp -------------------- #
 utils.page_configuration()
+utils.hide_elements()
 utils.sidebar_elements()
 
 st.title(":green[Límites] 📈")
