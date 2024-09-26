@@ -25,7 +25,7 @@ def sidebar_elements():
     #         """,
     #         unsafe_allow_html=True
     # )
-    st.sidebar.title("CalcMaster WebApp 1.0.1")
+    st.sidebar.title("CalcMaster WebApp 1.0.2")
 
     # Defining all the pages and the interface into the sidebar
     with st.sidebar:
@@ -34,7 +34,18 @@ def sidebar_elements():
         st.page_link(page="pages/limit.py", label="Límites", icon=":material/query_stats:")
 
         st.divider()
-        st.write(":orange[Aplicación Web para cálculo universitario]")
+
+        st.html("""<h2 style="text-align:center; color:orange";>
+                WebApp para cálculo universitario
+                """)
+        
+        st.html("""<h2 style="text-align:center; color:green";>
+                Created by José Alberto Guzmán Torres
+                </h2>
+                """)
+        
+        with st.container():
+            st.image("Images/Logo_1.webp", width=280)
 #----------------------------------------------------------------#
 # Imagen de la página de Inicio
 @st.cache_resource
@@ -57,3 +68,27 @@ def hide_elements(hide_menu=True, hide_footer=True, hide_header=True):
         style += "header {visibility: hidden;}"
     style += "</style>"
     st.markdown(style, unsafe_allow_html=True)
+
+# # Ocultando el botón de hamburguesa
+# @st.cache_resource
+# def hidding_hamburguer():
+#     hide_streamlit_style = """
+#     <style>
+#     #MainMenu {visibility: hidden;}
+#     footer {visibility: hidden;}
+#     header {visibility:hidden;}
+#     </style>
+#     """
+#     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# #----------------------------------------------------------------#
+# # Ocultando el botón de GitHub
+# @st.cache_resource
+# def hidding_github():
+#     hide_github_icon = """
+#     <style>
+#     #GithubIcon {visibility: hidden;}
+#     footer {visibility: hidden;}
+#     header {visibility:hidden;}
+#     </style>
+#     """
+#     st.markdown(hide_github_icon, unsafe_allow_html=True)
