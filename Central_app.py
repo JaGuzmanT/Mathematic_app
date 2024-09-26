@@ -14,7 +14,7 @@ st.divider()
 lottie_animation = utils.load_lottiefile("Gifs/Mathematics.json")
 st_lottie(lottie_animation, height=200) # For more information about gifs you can check https://lottiefiles.com/
 
-# utils.imagen_inicio()
+utils.imagen_inicio()
 
 with st.expander(label="Operadores de CalcMaster WebApp", icon="🔥"):
         st.write(":blue[Valor Absoluto] --> :orange[abs()]")
