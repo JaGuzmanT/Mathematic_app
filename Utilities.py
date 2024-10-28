@@ -25,13 +25,14 @@ def sidebar_elements():
     #         """,
     #         unsafe_allow_html=True
     # )
-    st.sidebar.title("CalcMaster WebApp 1.0.2")
+    st.sidebar.title("CalcMaster WebApp 1.0.3")
 
     # Defining all the pages and the interface into the sidebar
     with st.sidebar:
-        st.page_link(page="Central_app.py", label="Home", icon=":material/home:" )
-        st.page_link(page="pages/functions.py", label="Funciones", icon=":material/monitoring:")
-        st.page_link(page="pages/limit.py", label="Límites", icon=":material/query_stats:")
+        st.page_link(page="Central_app.py", label="Inicio", icon=":material/home:" )
+        st.page_link(page="pages/functions.py", label="Graficar", icon=":material/monitoring:")
+        st.page_link(page="pages/limit.py", label="Calcular Límites", icon=":material/query_stats:")
+        st.page_link(page="pages/Derivadas.py", label="Calcular derivadas", icon=":material/query_stats:")
 
         st.divider()
 
