@@ -26,7 +26,8 @@ def sidebar_elements():
 	#         unsafe_allow_html=True
 	# )
 	st.sidebar.html("""<h1 style='text-align:center; color:orange'>
-					CalcMaster WebApp 1.0.3 </h1>""")
+					CalcMaster WebApp 1.0.3
+				</h1>""")
 
 	# Defining all the pages and the interface into the sidebar
 	with st.sidebar:
@@ -40,6 +41,10 @@ def sidebar_elements():
 
 		with st.container():
 			st.image("Images/UMSNH.jpg", width=210)
+	
+	st.sidebar.html("""<h2 style='text-align:center; color:green'>
+				Created by José A. Guzmán Torres
+				</h2>""")
 #----------------------------------------------------------------#
 # Imagen de la página de Inicio
 @st.cache_resource

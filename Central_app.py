@@ -7,7 +7,6 @@ from streamlit_lottie import st_lottie
 utils.page_configuration()
 utils.hide_elements()
 utils.sidebar_elements()
-utils.background_main()
 
 st.title(":green[CalcMaster WebApp] 👨‍🏫")
 st.divider()
