@@ -9,7 +9,7 @@ def page_configuration():
 	st.set_page_config(page_title="CalcMaster",
 				page_icon="Images/Logo.ico",
 				layout="wide",
-				initial_sidebar_state="auto")
+				initial_sidebar_state="expanded")
 #----------------------------------------------------------------#
 # Configuración del sidebar
 def sidebar_elements():
@@ -36,16 +36,10 @@ def sidebar_elements():
 		st.page_link(page="pages/limit.py", label="Calcular Límites", icon=":material/query_stats:")
 		st.page_link(page="pages/Derivadas.py", label="Calcular derivadas", icon=":material/function:")
 		st.page_link(page="pages/Acerca.py", label="Acerca de", icon=":material/info:" )
-
 		st.divider()
-		
-		st.html("""<h2 style="text-align:center; color:green";>
-				Created by José Alberto Guzmán Torres
-				</h2>
-				""")
-		
-		# with st.container():
-		#     st.image("Images/Logo_1.webp", width=280)
+
+		with st.container():
+			st.image("Images/UMSNH.jpg", width=210)
 #----------------------------------------------------------------#
 # Imagen de la página de Inicio
 @st.cache_resource
