@@ -25,14 +25,17 @@ def sidebar_elements():
     #         """,
     #         unsafe_allow_html=True
     # )
+    st.sidebar.html(""" Hola """)
     st.sidebar.title("CalcMaster WebApp 1.0.3")
 
     # Defining all the pages and the interface into the sidebar
     with st.sidebar:
+        st.logo(image="Images/Logo_1.webp")
         st.page_link(page="Central_app.py", label="Inicio", icon=":material/home:" )
         st.page_link(page="pages/functions.py", label="Graficar", icon=":material/monitoring:")
         st.page_link(page="pages/limit.py", label="Calcular Límites", icon=":material/query_stats:")
-        st.page_link(page="pages/Derivadas.py", label="Calcular derivadas", icon=":material/query_stats:")
+        st.page_link(page="pages/Derivadas.py", label="Calcular derivadas", icon=":material/function:")
+        st.page_link(page="pages/Acerca.py", label="Acerca de", icon=":material/info:" )
 
         st.divider()
 
@@ -45,8 +48,8 @@ def sidebar_elements():
                 </h2>
                 """)
         
-        with st.container():
-            st.image("Images/Logo_1.webp", width=280)
+        # with st.container():
+        #     st.image("Images/Logo_1.webp", width=280)
 #----------------------------------------------------------------#
 # Imagen de la página de Inicio
 @st.cache_resource
