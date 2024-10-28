@@ -7,4 +7,3 @@ import Utilities as utils
 utils.page_configuration()
 utils.hide_elements()
 utils.sidebar_elements()
-

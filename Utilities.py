@@ -86,3 +86,28 @@ def hide_elements(hide_menu=True, hide_footer=True, hide_header=True):
 #     </style>
 #     """
 #     st.markdown(hide_github_icon, unsafe_allow_html=True)
+
+def background_main():
+		
+	# Ruta o URL de la imagen que quieres usar como fondo
+	image_url = "Images/Logo_1.webp"  # Cambia esto por la URL o ruta de tu imagen
+
+	# CSS para configurar la imagen de fondo
+	st.markdown(
+		f"""
+		<style>
+		.stApp {{
+			background-image: url("{image_url}");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}}
+		</style>
+		""",
+		unsafe_allow_html=True
+	)
+
+	# Contenido de la aplicación
+	st.title("Aplicación con Imagen de Fondo")
+	st.write("Esta es una aplicación de Streamlit con una imagen de fondo personalizada.")
