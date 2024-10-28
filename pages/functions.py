@@ -15,7 +15,7 @@ st.divider()
 with st.form(key="dominios"):
     st.subheader("Gráfica de una función", divider="rainbow")
     # variable = st.text_input(label="Define la variable de la función a evaluar", value="x", placeholder="x, y u otra variable")
-    variable = st.multiselect(label="Define la variable de la función a evaluar", options=['x','y','z'], placeholder="Elige una opción")
+    variable = st.selectbox(label="Define la variable de la función a evaluar", options=['x','y','z'], placeholder="Elige una opción")
     variable = str(variable)
     funcion = st.text_input(label="Función a evaluar", placeholder="Introduce una función")
 
