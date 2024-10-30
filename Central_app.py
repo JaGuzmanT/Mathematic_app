@@ -1,4 +1,5 @@
 # Loading libraries
+# Esta app corre en el environment: Streamlit --ROG STRIX
 import streamlit as st
 import Utilities as utils
 from streamlit_lottie import st_lottie
